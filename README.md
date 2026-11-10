@@ -1,10 +1,10 @@
 # Hi, I’m vgbn
 
-Telecom student in Hanoi interested in Linux, embedded systems, and software for research.
+I'm a Telecommunication student that interested in Linux, embedded systems, finance and video games!!!!!
 
 ## Projects
 
-- [Bash-Scripts](https://github.com/vgbn2/Bash-Scripts) — Linux diagnostics, maintenance, and hardware utilities.
-- [personal_finance_draft](https://github.com/vgbn2/personal_finance_draft) — market data and trading research software.
-- [BTL_KTLT](https://github.com/vgbn2/BTL_KTLT) — C++ mobile subscriber management course project.
-- [diabetic](https://github.com/vgbn2/diabetic) — glucose data monitoring and modeling research.
+- [Bash-Scripts](https://github.com/vgbn2/Bash-Scripts). This is to simplify some Linux diagnostics,easier maintenance, and monitoring hardware state.
+- [personal_finance_draft](https://github.com/vgbn2/personal_finance_draft).This is a market data ingestion and trading research+execution software.
+- [BTL_KTLT](https://github.com/vgbn2/BTL_KTLT).This is my OOP C++ mobile subscriber management course project (wish it was about making videogames).
+- [diabetic](https://github.com/vgbn2/diabetic).This is a glucose data monitoring and predcition tool,I want to predict when a type 1 Diabetic patient is going to faint.
