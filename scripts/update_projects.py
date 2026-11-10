@@ -11,6 +11,7 @@ DESCRIPTIONS = {
 }
 START = "<!-- projects:start -->"
 END = "<!-- projects:end -->"
+EXCLUDED = {"vgbn2", "diabetic", "personal_finance_draft", "codescroll", "personal_finance", "deno-ai-relay", "vercel-ai-relay"}
 
 
 def main():
@@ -30,7 +31,7 @@ def main():
         repositories = result["data"]["user"]["repositories"]
         for repo in repositories["nodes"]:
             name = repo["name"]
-            if repo["isFork"] or name in {"vgbn2", "diabetic", "personal_finance_draft"} or not repo["defaultBranchRef"]:
+            if repo["isFork"] or name in EXCLUDED or not repo["defaultBranchRef"]:
                 continue
             count = repo["defaultBranchRef"]["target"]["history"]["totalCount"]
             description = DESCRIPTIONS.get(name, repo["description"] or "No description yet.")
@@ -39,7 +40,7 @@ def main():
             break
         cursor = repositories["pageInfo"]["endCursor"]
 
-    lines = [START, "## Projects", "", "- **[SV Console](https://github.com/vgbn2/personal_finance_draft)** — Market data ingestion and trading research and execution software.", "- **[diabetic](https://github.com/vgbn2/diabetic)** — Glucose monitoring and prediction research, including faint-risk prediction for people with type 1 diabetes.", "", "### More projects", "", "Public non-fork repositories, ordered by total commits on the default branch; counts include all contributors.", ""]
+    lines = [START, "## Projects", "", "- **[SV Console](https://github.com/vgbn2/personal_finance_draft)** — Market data ingestion and trading research and execution software.", "- **[diabetic](https://github.com/vgbn2/diabetic)** — Glucose monitoring and prediction research, including faint-risk prediction for people with type 1 diabetes.", "", "### More projects", "", "Selected public non-fork repositories, ordered by total commits on the default branch; counts include all contributors.", ""]
     for name, description, count in sorted(projects, key=lambda item: (-item[2], item[0].lower())):
         lines.append(f"- **[{name}](https://github.com/vgbn2/{name})** — {description} ({count} commits)")
     lines.append(END)
