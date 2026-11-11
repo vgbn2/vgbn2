@@ -1,6 +1,6 @@
 # Hi, I’m vgbn
 
-I'm a telecommunications student interested in Linux, embedded systems, finance and video games!!!!!
+I'm a telecommunications student/engineer interested in Linux,networking, embedded systems, finance and video games!!!!!
 
 <!-- projects:start -->
 ## Projects
